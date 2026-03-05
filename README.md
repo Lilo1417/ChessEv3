@@ -1,4 +1,4 @@
-# Chess (0–2 players)
+# Chessrobot for Ev3 Lego
 
 > A Copy of https://github.com/katkaypettitt/chess. We modified the code for a Schoolproject to create a chessrobot, where a Legoboard updates automatically.
 <!---->
