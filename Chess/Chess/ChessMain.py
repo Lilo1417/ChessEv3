@@ -3,14 +3,14 @@ from Chess import ChessEngine, ChessAI
 
 # Player settings. Turn player_one to True to play as white and/or player_two to True to play black.
 player_one = True  # If the AI is playing white, then False
-player_two = True  # Same as above but for black
+player_two = False  # Same as above but for black
 
 p.init()  # Initialize pygame
 
-board_width = board_height = 1024  # Can switch to 512 if screen is too big
+board_width = board_height = 680  # Can switch to 512 if screen is too big
 dimension = 8  # Dimensions of a chess board are 8x8
 sq_size = board_height // dimension
-max_fps = 6000  # For animations
+max_fps = 15  # For animations
 images = {}
 colours = [p.Color('#EBEBD0'), p.Color('#769455')]  # Board colours
 
