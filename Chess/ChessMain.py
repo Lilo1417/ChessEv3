@@ -2,8 +2,8 @@ import pygame as p
 from Chess import ChessEngine, ChessAI
 
 # Player settings. Turn player_one to True to play as white and/or player_two to True to play black.
-player_one = False  # If the AI is playing white, then False
-player_two = False  # Same as above but for black
+player_one = True  # If the AI is playing white, then False
+player_two = True  # Same as above but for black
 
 p.init()  # Initialize pygame
 
@@ -62,11 +62,16 @@ def main():
                     else:
                         square_selected = (row, column)
                         player_clicks.append(square_selected)  # Appends both 1st and 2nd clicks
+                        
+                    # handle single Move
                     if len(player_clicks) == 2:
                         move = ChessEngine.Move(player_clicks[0], player_clicks[1], game_state.board)
+                        #find the move
                         for i in range(len(valid_moves)):
                             if move == valid_moves[i]:
+                                #make move
                                 game_state.make_move(valid_moves[i])
+
                                 move_made = True
                                 animate = True
                                 square_selected = ()  # Resets user clicks
